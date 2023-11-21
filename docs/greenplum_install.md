@@ -120,7 +120,7 @@ done
 for i in {'158.160.37.130','158.160.124.70','158.160.63.31','158.160.127.44'}; do
 
 # скачиваем сборку под ubuntu-2004
-ssh -o StrictHostKeyChecking=no ubuntu@$i ' sudo wget https://github.com/aoslepov/greenplum-ubuntu/raw/main/install/gpdb-2004.tar.gz -O /usr/local/gpdb-2004.tar.gz; cd /usr/local/ &&  sudo tar -xzvf /usr/local/gpdb-2004.tar.gz'
+ssh -o StrictHostKeyChecking=no ubuntu@$i ' sudo wget https://github.com/aoslepov/greenplum-ubuntu/releases/download/greenplum-7/gpdb-2004.tar.gz -O /usr/local/gpdb-2004.tar.gz; cd /usr/local/ &&  sudo tar -xzvf /usr/local/gpdb-2004.tar.gz'
 
 # добавляем юзера
 ssh ubuntu@$i 'sudo groupadd gpadmin; sudo useradd gpadmin -r -m -g gpadmin; sudo chsh -s /bin/bash gpadmin'
